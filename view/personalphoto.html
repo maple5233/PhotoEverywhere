@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,height=device-height,
+	user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+	<meta name="keywords" content="照片社交、摄影作品、手机摄影"/>
+
+	<title>用户中心</title>
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../lib/Normalize.css">
+	<!--[if lt IE 9]>
+	  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="HolePage">
+		<div class="nav-region container">
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<div class="logo"></div>
+				</div>
+				<div class="nav col-md-6 col-xs-12 nav-right">
+					<ul class="list-inline">
+						<li><a @click="changeToSelf(true)" :class="{'this-page-name' : self}">我的主页</a></li>
+						<li><a @click="changeToSelf(false)" :class="{'this-page-name' : !self}">优秀照片</a></li>
+						<li><a href="#">相片管理</a></li>
+						<li><a href="#">个人设置</a></li>
+						<li><a href="#">我的地图</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<p class="title">{{self?'以下是我的最热图片':'以下是最站最热图片'}}</p>
+		<div class="b-region container">
+			<div v-for="pic in pics" class="pic-block">	
+				<div class="container">
+					<!--图片-->
+					<div class="pic-it"><img :src="pic.src" @click="showPic($index)"></div>
+					<!--描述-->
+					<div class="pic-info">
+						<!--标题和作者-->
+						<p class="pic-title">{{pic.title}}</p>
+						<p class="author">From {{pic.author}}</p>
+						<div class="des">
+							{{pic.describe}}
+						</div>
+					</div>
+					<!--底部点赞区-->
+					<div class="love-info">
+						<p class="hot-num">
+							<span class="glyphicon" :class="{'glyphicon-heart' : pic.like , 'glyphicon-heart-empty' : !pic.like }" @click="changeLike($index)"></span>热度({{pic.hot}})
+						</p>		
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../lib/vue.min.js"></script>
+	<script src="../js/personalphoto.js"></script>
+	<script src="http://cdn.bootcss.com/vue-resource/0.7.4/vue-resource.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+body
+{
+	background-color: #efefef;
+}
+#HolePage
+{
+	position: relative;
+	background-color: #efefef;
+}
+.nav-region
+{
+	height: 12%;
+	width: 100%;
+	padding-top: 15px;
+	background-color:#2E2D2D;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simhei,"黑体";
+}
+.nav-region .logo
+{
+	height: 48px;
+	width: 40%;
+	margin: 5px auto;
+	background: url(../images/photoeverywhere_logo.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.nav-region .nav-right 
+{
+	box-sizing: border-box;
+	padding:0;
+	ul
+	{
+		margin-top: 10px;
+		font-size: 0.9em;
+		padding: 15px;
+		li
+		{
+			width: 19%;
+			text-align: center;
+			box-sizing: border-box;
+			padding:0;
+		}
+		a
+		{
+			display: block;
+			color: #ffffff;
+			font-weight: normal;
+		}
+		.this-page-name
+		{
+			font-weight: bold!important;
+		}
+	}
+}
+@media screen and (max-width: 450px){
+	.nav-region .nav
+	{
+		background-color:#2E2D2D;
+	}
+	.nav-region .logo
+	{
+		width: 80%;
+	}
+	.nav-region ul
+	{
+		font-size: 15px;
+	}
+}
+.title
+{
+	margin: 10px auto;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simhei,"黑体";
+	font-weight: bold;
+	font-size: 25px;
+	width: 100%;
+	text-align: center;
+}
+.b-region
+{
+	box-sizing: border-box;
+}
+.b-region .pic-block
+{
+	margin: 5px auto;
+	padding: 5px;
+	box-sizing: border-box;
+	border-top:2px solid #CDCDCD;
+	overflow: hidden;
+	.pic-it
+	{
+		width: 30%;
+		float: left;
+		img
+		{
+			width: 100%;
+		}
+	}
+	.pic-info
+	{
+		width: 70%;
+		float: left;
+	}
+	@media screen and (max-width: 450px){
+		.pic-it
+		{
+			width: 50%;
+		}
+		.pic-info
+		{
+			width: 50%;
+		}
+	}
+	.author , .pic-title , .des
+	{
+		font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simhei,"黑体";
+		font-size: 0.8em;
+		font-weight: normal;
+		width: 100%;
+		padding: 5%;
+		margin: 0 0;
+		box-sizing: border-box;
+	}
+	.des
+	{
+		line-height: 1.2em;
+		max-height:12em;
+		overflow: scroll;
+		overflow-x:hidden;
+		&::-webkit-scrollbar
+		{
+			background-color: #efefef;
+		}
+	}
+	.pic-title
+	{
+		font-size: 1em;
+		font-weight: bold;
+	}
+	.love-info
+	{
+		width: 95%;
+		float: left;
+		padding: 5px;
+		box-sizing: border-box;
+		.hot-num
+		{
+			padding: 5px;
+			box-sizing: border-box;
+			text-align: right;
+		}
+	}
+}
