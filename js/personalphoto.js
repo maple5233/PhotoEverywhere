@@ -4,6 +4,7 @@ var vm = new Vue ({
     el: '#HolePage',
     data: {
         self : true,
+        showLikePho : false,
         pics : [{
             src : '../images/personal-index/gril.jpg',
             title : '梦中的伊甸园',
@@ -31,7 +32,8 @@ var vm = new Vue ({
     ready() {
         // console.log(1);
         setTimeout(function(){
-            document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px';  
+            document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px';
+            console.log(1);  
         },20); 
     },
     methods: {
@@ -43,9 +45,10 @@ var vm = new Vue ({
         },
         changeToSelf : function (self) {
             this.self = self;
+            this.showLikePho = false;
         },
-        goSetting : function (){
-
+        showLike : function (){
+            this.showLikePho = true;
         },
         logout : function () {
             window.location.href = '../view/index.html';

@@ -27,13 +27,14 @@
 					<ul class="list-inline">
 						<li><a @click="changeToSelf(true)" :class="{'this-page-name' : self}">我的主页</a></li>
 						<li><a @click="changeToSelf(false)" :class="{'this-page-name' : !self}">优秀照片</a></li>
-						<li><a @click="goSetting">个人设置</a></li>
+						<li><a @click="showLike">我喜欢的</a></li>
 						<li><a @click="logout">退出登录</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<p class="title">{{self?'以下是我的最热图片':'以下是最站最热图片'}}</p>
+		<p class="title" v-if="!showLikePho">{{self?'以下是我的最热图片':'以下是最站最热图片'}}</p>
+		<p class="title" v-if="showLikePho">以下是我喜欢的照片</p>
 		<div class="b-region container">
 			<div v-for="pic in pics" class="pic-block">	
 				<div class="container">
