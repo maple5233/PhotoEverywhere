@@ -8,7 +8,7 @@ var vm = new Vue ({
             src : '../images/personal-index/gril.jpg',
             title : '梦中的伊甸园',
             author :'MissMio兔兔纸',
-            describe : 'photo by：肉肉ROME\n这是一枚预告^_^ 油画里的我哈哈哈',
+            describe : 'photo by：肉肉ROME\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈\n这是一枚预告^_^ 油画里的我哈哈哈',
             hot : 139,
             like : true
         },{
@@ -43,6 +43,12 @@ var vm = new Vue ({
         },
         changeToSelf : function (self) {
             this.self = self;
+        },
+        goSetting : function (){
+
+        },
+        logout : function () {
+            window.location.href = '../view/index.html';
         }
     }
 })
