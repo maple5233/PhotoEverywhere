@@ -19,7 +19,8 @@ var vm = new Vue ({
             window.location.href = "personalphoto.html";
         },
         regist : function() {
-            
+            window.alert('注册成功!')
+            window.location.href ='../view/index.html'
         }
     }
 })

@@ -15,7 +15,7 @@ var vm = new Vue ({
     },
     methods: {
         send : function (){
-
+            window.location.href ='../view/index.html'
         }
     }
 })
